@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.rtplugin.cordova"
+        version="1.7.2">
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <name>Plot</name>
+    <description>Use the Plot library for Location Based Notifications in your Cordova/PhoneGap app.</description>
+    <author>Floating Market B.V.</author>
+    <keywords>plot,plotprojects,location,notification</keywords>
+    <license>Apache 2.0 License</license>
+	
+	
+	
+    <js-module src="RoottoolsPhonegapPlugin.js" name="RoottoolsPhonegapPlugin">
+        <clobbers target="rtplugin" />
+    </js-module>
+	
+	
+	
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RoottoolsPhonegapPlugin">
+                <param name="android-package" value="com.rtplugin.cordova.RoottoolsPhonegapPlugin" />
+            </feature>
+        </config-file>
+
+		<source-file src="src/android/com/stericson/RootTools/RootTools.java" target-dir="src/android/com/stericson/RootTools/" />
+        <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/android/com/rtplugin/" />
+
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+               <provider
+                android:authorities="$PACKAGE_NAME.rtplugin.debuglogprovider"
+                android:name="com.rtplugin.retail.android.DebugLogProvider"
+                android:exported="true" />
+        </config-file>
+
+    </platform>
+    
+    <info>Please see our plugin documentation for more information: http://www.plotprojects.com/plot-app-library-documentation-latest/</info>
+</plugin>
