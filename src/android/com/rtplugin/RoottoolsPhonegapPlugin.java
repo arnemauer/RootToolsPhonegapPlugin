@@ -96,7 +96,7 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
           //  boolean isAvailable = RootShell.isRootAvailable();
 			//if(RootShell.isRootAvailable()){
 			RootShell.debugMode = true;
-			callbackContext.success(RootShell.findBinary("su")).size());
+			callbackContext.success( (RootShell.findBinary("su")).size());
 			//}else{
 			//callbackContext.success(0);
 			//}
