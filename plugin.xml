@@ -38,7 +38,7 @@
 		<source-file src="src/android/com/stericson/RootShell/RootShell.java" target-dir="src/com/stericson/RootShell" />
 
 		
-        <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/com/rtplugin/roottoolsphonegapplugin" />
+        <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/com/rtplugin" />
 
 
 
