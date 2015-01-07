@@ -90,7 +90,6 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
     }
 	 
 	
-
     private void isRootAvailable(CallbackContext callbackContext) {
         try {
           //  boolean isAvailable = RootShell.isRootAvailable();
