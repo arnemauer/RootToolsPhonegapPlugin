@@ -33,7 +33,7 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("initPlugin".equals(action)) {
             this.isRootAvailable(callbackContext);
-		} else if ("rootAvailable".equals(action)) {
+		} else if ("isRootAvailable".equals(action)) {
             this.isRootAvailable(callbackContext);
 		} else if ("isAccessGiven".equals(action)) {
 			this.isAccessGiven(callbackContext);
@@ -96,7 +96,10 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
           //  boolean isAvailable = RootShell.isRootAvailable();
 			//if(RootShell.isRootAvailable()){
 			RootShell.debugMode = true;
-			callbackContext.success( "gevonden binaries:" + (RootShell.findBinary("su")).size()   );
+			String result = "gevonden binaries:" + (RootShell.findBinary("su")).size() ;
+			
+			
+			callbackContext.success(  result );
 			//}else{
 			//callbackContext.success(0);
 			//}

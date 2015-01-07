@@ -1,7 +1,7 @@
 cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(require, exports, module) {
 	rtplugin = {};
 	rtplugin.exampleConfiguration = { "publicKey": "", "cooldownPeriod": -1, "enableOnFirstRun": true };
-    
+     
   var notificationsToShow = [];
   var notificationsToFilter = [];
   
@@ -13,8 +13,8 @@ cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(r
 	
 		
 
-	rtplugin.rootAvailable = function(successCallback, failureCallback) {
-		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "rootAvailable", []);
+	rtplugin.isRootAvailable = function(successCallback, failureCallback) {
+		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "isRootAvailable", []);
 	};
 	
 	rtplugin.isAccessGiven = function(successCallback, failureCallback) {
