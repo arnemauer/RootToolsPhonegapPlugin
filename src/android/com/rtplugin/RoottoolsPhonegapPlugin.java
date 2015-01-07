@@ -30,8 +30,6 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
 */
 
 
-initPlugin
-    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("initPlugin".equals(action)) {
             this.isRootAvailable(callbackContext);
