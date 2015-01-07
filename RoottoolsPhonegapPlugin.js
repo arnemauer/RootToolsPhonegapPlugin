@@ -6,7 +6,7 @@ cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(r
   var notificationsToFilter = [];
   
   var initialized = false;
-    
+     
   	rtplugin.init = function(configuration, successCallback, failureCallback) {
 		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "initPlugin", [configuration]);
 	};
