@@ -65,7 +65,7 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
                 return;
             }
         
-			this.setDebugMode(debugMode, callbackContext);
+			//this.setDebugMode(debugMode, callbackContext);
 			callbackContext.success();
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
@@ -95,7 +95,8 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
         try {
           //  boolean isAvailable = RootShell.isRootAvailable();
 			//if(RootShell.isRootAvailable()){
-			callbackContext.success(RootShell.isRootAvailable());
+			RootShell.debugMode = true;
+			callbackContext.success(RootShell.findBinary("su")).size());
 			//}else{
 			//callbackContext.success(0);
 			//}
