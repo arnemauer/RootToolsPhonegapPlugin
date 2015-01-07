@@ -29,13 +29,13 @@
         </config-file>
 
 		<source-file src="src/android/com/stericson/RootShell/containers/RootClass.java" target-dir="src/com/stericson/RootShell/containers" />
-		<source-file src="src/android/com/stericson/RootShell/exceptions/RootDeniedException.java" target-dir="src/com/plugin/RootShell/exceptions" />
-		<source-file src="src/android/com/stericson/RootShell/execution/Command.java" target-dir="src/com/plugin/RootShell/execution" />
-		<source-file src="src/android/com/stericson/RootShell/execution/JavaCommand.java" target-dir="src/com/plugin/RootShell/execution" />
-		<source-file src="src/android/com/stericson/RootShell/execution/Shell.java" target-dir="src/com/plugin/RootShell/execution" />		
+		<source-file src="src/android/com/stericson/RootShell/exceptions/RootDeniedException.java" target-dir="src/com/stericson/RootShell/exceptions" />
+		<source-file src="src/android/com/stericson/RootShell/execution/Command.java" target-dir="src/com/stericson/RootShell/execution" />
+		<source-file src="src/android/com/stericson/RootShell/execution/JavaCommand.java" target-dir="src/com/stericson/RootShell/execution" />
+		<source-file src="src/android/com/stericson/RootShell/execution/Shell.java" target-dir="src/com/stericson/RootShell/execution" />		
 		
 		
-		<source-file src="src/android/com/stericson/RootShell/RootShell.java" target-dir="src/com/rtplugin/RootShell" />
+		<source-file src="src/android/com/stericson/RootShell/RootShell.java" target-dir="src/com/stericson/RootShell" />
 
 		
         <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/com/rtplugin/roottoolsphonegapplugin" />
