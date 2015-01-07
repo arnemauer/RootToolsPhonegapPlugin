@@ -30,9 +30,12 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
 */
 
 
+initPlugin
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("rootAvailable".equals(action)) {
+        if ("initPlugin".equals(action)) {
+            this.isRootAvailable(callbackContext);
+		} else if ("rootAvailable".equals(action)) {
             this.isRootAvailable(callbackContext);
 		} else if ("isAccessGiven".equals(action)) {
 			this.isAccessGiven(callbackContext);
@@ -46,28 +49,49 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
 
 	
 	
-
-/*
-    private void enable(CallbackContext callbackContext) {
+ private void initPlot(JSONArray args, CallbackContext callbackContext) {
         try {
-            Plot.enable();
-            callbackContext.success();
+            JSONObject jsonConfiguration;
+            try {
+                jsonConfiguration = args.getJSONObject(0);
+            } catch (JSONException e) {
+                callbackContext.error("Configuration not specified or not specified correctly.");
+                return;
+            }
+
+			 boolean debugMode;
+            try {
+                debugMode = jsonConfiguration.getBoolean("debugMode");
+			} catch (JSONException e) {
+                callbackContext.error("DebugMode  not specified or not specified correctly.");
+                return;
+            }
+        
+			this.setDebugMode(debugMode, CallbackContext);
+			callbackContext.success();
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
         }
     }
-
 	
-    private void disable(CallbackContext callbackContext) {
+	
+	    private void setDebugMode(boolean debugModeOn, CallbackContext callbackContext) {
         try {
-            Plot.disable();
-            callbackContext.success();
+          //  boolean isAvailable = RootShell.isRootAvailable();
+			if(debugModeOn){
+			RootShell.debugMode = true;
+			}else{
+			RootShell.debugMode = false;
+			}
+			
+			callbackContext.success();
+           // callbackContext.success(isAvailable ? 1 : 0);
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
         }
     }
-
-	*/
+	
+	
 
     private void isRootAvailable(CallbackContext callbackContext) {
         try {

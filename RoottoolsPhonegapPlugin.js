@@ -7,7 +7,11 @@ cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(r
   
   var initialized = false;
     
-  
+  	rtplugin.init = function(configuration, successCallback, failureCallback) {
+		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "initPlugin", [configuration]);
+	};
+	
+		
 
 	rtplugin.rootAvailable = function(successCallback, failureCallback) {
 		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "rootAvailable", []);
