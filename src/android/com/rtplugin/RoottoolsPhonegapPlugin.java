@@ -1,4 +1,4 @@
-package com.rtplugin.RoottoolsPhonegapPlugin;
+package com.rtplugin;
 
 import android.content.Context;
 import android.content.Intent;
