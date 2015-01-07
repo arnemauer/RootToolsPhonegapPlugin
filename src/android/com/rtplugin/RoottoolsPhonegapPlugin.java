@@ -1,4 +1,4 @@
-package com.rtplugin.cordova;
+package com.rtplugin.roottoolsphonegapplugin;
 
 import android.content.Context;
 import android.content.Intent;
