@@ -65,7 +65,7 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
                 return;
             }
         
-			this.setDebugMode(debugMode, CallbackContext);
+			this.setDebugMode(debugMode, callbackContext);
 			callbackContext.success();
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
