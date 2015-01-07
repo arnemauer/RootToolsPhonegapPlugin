@@ -9,9 +9,15 @@ cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(r
     
   
 
-	rtplugin.rootavailable = function(successCallback, failureCallback) {
-		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "rootavailable", []);
+	rtplugin.rootAvailable = function(successCallback, failureCallback) {
+		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "rootAvailable", []);
 	};
+	
+	rtplugin.isAccessGiven = function(successCallback, failureCallback) {
+		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "isAccessGiven", []);
+	};
+	
+	
 	/*
 	plot.disable = function(successCallback, failureCallback) {
 		 cordova.exec(successCallback, failureCallback, "RoottoolsPhonegapPlugin", "disable", []);

@@ -32,10 +32,10 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("rootavailable".equals(action)) {
+        if ("rootAvailable".equals(action)) {
             this.isRootAvailable(callbackContext);
-				//} else if ("disable".equals(action)) {
-				//    this.disable(callbackContext);
+		} else if ("isAccessGiven".equals(action)) {
+			this.isAccessGiven(callbackContext);
 				//} else if ("isEnabled".equals(action)) {
 				//    this.isEnabled(callbackContext);
         } else {
@@ -44,6 +44,8 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
         return true;
     }
 
+	
+	
 
 /*
     private void enable(CallbackContext callbackContext) {
@@ -76,6 +78,15 @@ public class RoottoolsPhonegapPlugin extends CordovaPlugin {
         }
     }
 
+	    private void isAccessGiven(CallbackContext callbackContext) {
+        try {
+            boolean isAvailable = RootShell.isAccessGiven();
+            callbackContext.success(isAvailable ? 1 : 0);
+        } catch (Exception e) {
+            callbackContext.error(e.getMessage());
+        }
+    }
+	
 	/*
 	
     private void setCooldownPeriod(JSONArray args, CallbackContext callbackContext) {
