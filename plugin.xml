@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.rtplugin.cordova"
-        version="1.7.2">
+        id="com.rtplugin.roottoolsphonegapplugin"
+        version="1.0.0">
     <engines>
         <engine name="cordova" version=">=3.0.0" />
     </engines>
