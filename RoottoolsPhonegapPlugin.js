@@ -1,4 +1,4 @@
-cordova.define("cordova/plugin/com.rtplugin.cordova", function(require, exports, module) {
+cordova.define("cordova/plugin/com.rtplugin.roottoolsphonegapplugin", function(require, exports, module) {
 	plot = {};
 	plot.exampleConfiguration = { "publicKey": "", "cooldownPeriod": -1, "enableOnFirstRun": true };
     

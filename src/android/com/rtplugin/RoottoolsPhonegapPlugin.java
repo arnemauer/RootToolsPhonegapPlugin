@@ -15,7 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.stericson.RootTools.*;
+import com.stericson.RootShell.RootShell;
 
 
 public class RoottoolsPhonegapPlugin extends CordovaPlugin {
