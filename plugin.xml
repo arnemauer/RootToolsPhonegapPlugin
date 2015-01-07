@@ -41,12 +41,6 @@
         <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/com/rtplugin/roottoolsphonegapplugin" />
 
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-               <provider
-                android:authorities="$PACKAGE_NAME.rtplugin.debuglogprovider"
-                android:name="com.rtplugin.retail.android.DebugLogProvider"
-                android:exported="true" />
-        </config-file>
 
     </platform>
     
