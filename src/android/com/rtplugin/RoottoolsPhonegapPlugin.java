@@ -18,7 +18,7 @@ import org.json.JSONObject;
 import com.stericson.RootTools.*;
 
 
-public class PlotCordovaPlugin extends CordovaPlugin {
+public class RoottoolsPhonegapPlugin extends CordovaPlugin {
 
 /*
     @Override

@@ -24,12 +24,21 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="RoottoolsPhonegapPlugin">
-                <param name="android-package" value="com.rtplugin.cordova.RoottoolsPhonegapPlugin" />
+                <param name="android-package" value="com.rtplugin.roottoolsphonegapplugin" />
             </feature>
         </config-file>
 
-		<source-file src="src/android/com/stericson/RootTools/RootTools.java" target-dir="src/android/com/stericson/RootTools/" />
-        <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/android/com/rtplugin/" />
+		<source-file src="src/android/com/stericson/RootShell/containers/RootClass.java" target-dir="src/com/stericson/RootShell/containers" />
+		<source-file src="src/android/com/stericson/RootShell/exceptions/RootDeniedException.java" target-dir="src/com/plugin/RootShell/exceptions" />
+		<source-file src="src/android/com/stericson/RootShell/execution/Command.java" target-dir="src/com/plugin/RootShell/execution" />
+		<source-file src="src/android/com/stericson/RootShell/execution/JavaCommand.java" target-dir="src/com/plugin/RootShell/execution" />
+		<source-file src="src/android/com/stericson/RootShell/execution/Shell.java" target-dir="src/com/plugin/RootShell/execution" />		
+		
+		
+		<source-file src="src/android/com/stericson/RootShell/RootShell.java" target-dir="src/com/rtplugin/RootShell" />
+
+		
+        <source-file src="src/android/com/rtplugin/RoottoolsPhonegapPlugin.java" target-dir="src/com/rtplugin/roottoolsphonegapplugin" />
 
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
